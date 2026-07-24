@@ -6,7 +6,11 @@ services:
     container_name: he853api
     privileged: true
     volumes:
-    - /dev:/dev
+      - /dev:/dev
     environment:
-    - TIMEZONE=Europe/Amsterdam
+      - TIMEZONE=Europe/Amsterdam
+      - HE853_API_KEY=${HE853_API_KEY}
     restart: always
+    ports:
+      - 8000:8000
+    

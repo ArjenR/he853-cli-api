@@ -14,7 +14,7 @@ Example: ```http://he853api:8000/switch?address=1001&action=on```
 
 ## 'Works for me', so use at your own risk.
 
-I do some parameter evaluation to make sure the api is safe to use. It does do a call to an external application so access to the underlying operationg system is possible in theory. AND THERE IS NO AUTHENTICATION AT ALL!! That is why it is best to run it isolated in a docker container together with node-red or other. 
+I do some parameter evaluation to make sure the api is safe to use. It does do a call to an external application so access to the underlying operationg system is possible in theory.
 
 See the docker-compose.yml
 
@@ -23,3 +23,11 @@ I guess it is as safe as the python fastapi module and he853-cli
 Just do a ```docker-compose build``` and ```docker-compose up``` to build and run. 
 
 The code is so simple that it might be self explanatory.
+
+## Update: major rewrite by lumo
+
+Since I had to rebuild the docker server this was running on I thought it would be interesting to have the api server analyzed an refactored by Lumo. Lumo is a privacy respecting AI solution from Proton.
+
+I agreed with it's conclusions about my code and setup and it's proposal to refactor and improve the code. 
+
+So now there is an API key to protect access. Some deprecated python code was replaced. And it has been written even more secure and dependable. Not all went perfect. But that is why there still is a human-in-the-loop.
